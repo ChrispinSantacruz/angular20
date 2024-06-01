@@ -1,0 +1,10 @@
+<mat-toolbar color="primary">
+    <span>Movie App</span>
+    <span class="spacer"></span>
+    <button mat-button routerLink="/create" *ngIf="isAdmin">Crear</button>
+    <button mat-button routerLink="/view">Ver</button>
+    <button mat-button routerLink="/delete" *ngIf="isAdmin">Eliminar</button>
+    <button mat-button *ngIf="!isLoggedIn" routerLink="/login">Login</button>
+    <button mat-button *ngIf="isLoggedIn" (click)="logout()">Logout</button>
+  </mat-toolbar>
+  

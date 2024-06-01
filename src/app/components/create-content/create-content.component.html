@@ -1,0 +1,34 @@
+<mat-card>
+    <mat-card-title>Crear Contenido</mat-card-title>
+    <form [formGroup]="contentForm" (ngSubmit)="onSubmit()">
+      <mat-form-field>
+        <mat-label>Título</mat-label>
+        <input matInput formControlName="title">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Tipo</mat-label>
+        <mat-select formControlName="type">
+          <mat-option value="movie">Película</mat-option>
+          <mat-option value="series">Serie</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Poster URL</mat-label>
+        <input matInput formControlName="poster_url">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Trailer URL</mat-label>
+        <input matInput formControlName="trailer_url">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Duración (minutos)</mat-label>
+        <input matInput type="number" formControlName="duration_minutes">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Número de episodios</mat-label>
+        <input matInput type="number" formControlName="num_episodes">
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Crear</button>
+    </form>
+  </mat-card>
+  
